@@ -3,9 +3,10 @@ package fr.unilim.iut.fizzbuzz;
 public class FizzBuzz {
 
 	public String donnerLaReponsePour(Integer nombre) {
+		RegleFizzBuzz reglefizzbuzz= new RegleFizzBuzz();
 
-		if (isFizzBuzz(nombre))
-			return "fizzbuzz";
+		if (reglefizzbuzz.estVerifeePar(nombre))
+			return reglefizzbuzz.valeurAAfficherSiRegleVerifiee();
 
 		if (isBuzz(nombre))
 			return "buzz";
@@ -14,10 +15,6 @@ public class FizzBuzz {
 			return "fizz";
 
 		return String.valueOf(nombre);
-	}
-
-	private boolean isFizzBuzz(Integer nombre) {
-		return 0 == nombre % (3 * 5);
 	}
 
 	private boolean isBuzz(Integer nombre) {
