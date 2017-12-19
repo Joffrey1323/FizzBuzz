@@ -1,8 +1,8 @@
 package fr.unilim.iut.fizzbuzz;
 
-public class RegleFizzBuzz {
+public class RegleFizzBuzz implements Regle {
 
-	public boolean estVerifeePar(Integer nombre) {
+	public boolean estVerifieePar(Integer nombre) {
 		return 0 == nombre % (3 * 5);
 	}
 
