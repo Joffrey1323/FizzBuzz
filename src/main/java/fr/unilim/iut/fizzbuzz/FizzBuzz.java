@@ -1,15 +1,12 @@
 package fr.unilim.iut.fizzbuzz;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class FizzBuzz {
 	
-	List<Regle> regles= Arrays.asList(
-			new RegleFizzBuzz(),
-			new RegleFizz(),
-			new RegleBuzz());
-
+	List<Regle> regles= FizzBuzzReglesFactory.build();
+	
+	
 	Regle reglefizzbuzz= new RegleFizzBuzz();
 	Regle regleBuzz= new RegleBuzz();
 	Regle regleFizz= new RegleFizz();
