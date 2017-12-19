@@ -4,12 +4,23 @@ import java.util.List;
 
 public class FizzBuzz {
 	
-	List<Regle> regles= FizzBuzzReglesFactory.build();
+	List<Regle> regles;
 	
 	
 	Regle reglefizzbuzz= new RegleFizzBuzz();
 	Regle regleBuzz= new RegleBuzz();
 	Regle regleFizz= new RegleFizz();
+	
+	
+	public FizzBuzz(){
+		this(FizzBuzzReglesFactory.build());
+	}
+	
+	private FizzBuzz(List<Regle> regle) {
+		regles= FizzBuzzReglesFactory.build();
+		
+	}
+	
 	public String donnerLaReponsePour(Integer nombre) {
 		
 		for (Regle regle: regles){
